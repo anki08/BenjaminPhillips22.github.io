@@ -5,7 +5,7 @@ description: Ben Phillips - Data Scince, Machine Learning, Statistical Analysis,
 url: "https://benjaminphillips22.github.io"
 twitter_username: Ben_Phillips22
 github_username:  benjaminphillips22
-google_analytics: UA-110543961-1
+#google_analytics: UA-110543961-1
 
 theme: jekyll-theme-minimal
 plugins:
