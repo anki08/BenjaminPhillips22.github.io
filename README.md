@@ -1,4 +1,4 @@
 
 ### Portfolio Website
 
-[BenjaminPhillips22.github.io](BenjaminPhillips22.github.io)
+You can find a selection of my work at BenjaminPhillips22.github.io
