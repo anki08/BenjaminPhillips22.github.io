@@ -12,4 +12,4 @@ You can find a selection of my personal projects at <a href="https://benjaminphi
 <br>
 <br>
 <br>
-template by: [gsura](https://gsurma.github.io/)
+template by: <a href="https://gsurma.github.io/" target="_blank"> gsura </a>
