@@ -100,3 +100,34 @@ body {
     -moz-transition-property: -moz-transform, opacity;
     transition-property: transform, opacity;
 }
+.icon  {
+    text-decoration: none;
+    /* transition: all 0.3s; */
+    color: #0C1D2E
+}
+
+.icon i {
+    transition: all 0.3s;
+}
+
+.icon:hover i {
+    transform: scale(1.2);
+    color: #4B0082
+}
+
+/* .icon-linkedin {
+    color: #8A2BE2;
+}
+
+.icon-medium {
+    color: hotpink;
+}
+
+.icon-medium:hover{
+    color: pink;
+}
+
+.icon-email {
+    color: greenyellow;
+}
+ */
