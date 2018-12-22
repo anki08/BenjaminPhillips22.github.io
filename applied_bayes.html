@@ -1,0 +1,2695 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<link rel=File-List href="applied_bayes_files/filelist.xml">
+<link rel=Edit-Time-Data href="applied_bayes_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>ben</o:Author>
+  <o:LastAuthor>ben</o:LastAuthor>
+  <o:Revision>38</o:Revision>
+  <o:TotalTime>29</o:TotalTime>
+  <o:LastPrinted>2018-10-05T00:50:00Z</o:LastPrinted>
+  <o:Created>2018-12-21T21:29:00Z</o:Created>
+  <o:LastSaved>2018-12-22T01:28:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1849</o:Words>
+  <o:Characters>10542</o:Characters>
+  <o:Lines>87</o:Lines>
+  <o:Paragraphs>24</o:Paragraphs>
+  <o:CharactersWithSpaces>12367</o:CharactersWithSpaces>
+  <o:Version>16.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=dataStoreItem href="applied_bayes_files/item0028.xml"
+target="applied_bayes_files/props029.xml">
+<link rel=themeData href="applied_bayes_files/themedata.thmx">
+<link rel=colorSchemeMapping href="applied_bayes_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>120</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-AU</w:LidThemeOther>
+  <w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="375">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hashtag"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Unresolved Mention"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 1073786111 1 0 511 0;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610601745 1073750139 0 0 511 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536869121 64767 1 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:106%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:106%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	mso-font-kerning:0pt;
+	font-weight:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Header Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 225.65pt right 451.3pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Footer Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 225.65pt right 451.3pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-noshow:yes;
+	mso-style-priority:35;
+	mso-style-qformat:yes;
+	mso-style-next:Normal;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:#44546A;
+	mso-themecolor:text2;
+	font-style:italic;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	letter-spacing:-.5pt;
+	mso-font-kerning:14.0pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	letter-spacing:-.5pt;
+	mso-font-kerning:14.0pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	letter-spacing:-.5pt;
+	mso-font-kerning:14.0pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	letter-spacing:-.5pt;
+	mso-font-kerning:14.0pt;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#0563C1;
+	mso-themecolor:hyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:16.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Footer;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Title;
+	mso-ansi-font-size:28.0pt;
+	mso-bidi-font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	letter-spacing:-.5pt;
+	mso-font-kerning:14.0pt;}
+span.VerbatimChar
+	{mso-style-name:"Verbatim Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Source Code";
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	background:#F8F8F8;}
+p.SourceCode, li.SourceCode, div.SourceCode
+	{mso-style-name:"Source Code";
+	mso-style-unhide:no;
+	mso-style-link:"Verbatim Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	background:#F8F8F8;
+	word-break:break-all;
+	font-size:11.0pt;
+	font-family:Consolas;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+span.KeywordTok
+	{mso-style-name:KeywordTok;
+	mso-style-unhide:no;
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#204A87;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.DataTypeTok
+	{mso-style-name:DataTypeTok;
+	mso-style-unhide:no;
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#204A87;
+	background:#F8F8F8;}
+span.DecValTok
+	{mso-style-name:DecValTok;
+	mso-style-unhide:no;
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#0000CF;
+	background:#F8F8F8;}
+span.StringTok
+	{mso-style-name:StringTok;
+	mso-style-unhide:no;
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#4E9A06;
+	background:#F8F8F8;}
+span.CommentTok
+	{mso-style-name:CommentTok;
+	mso-style-unhide:no;
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.OperatorTok
+	{mso-style-name:OperatorTok;
+	mso-style-unhide:no;
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#CE5C00;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.NormalTok
+	{mso-style-name:NormalTok;
+	mso-style-unhide:no;
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	background:#F8F8F8;}
+span.FloatTok
+	{mso-style-name:FloatTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#0000CF;
+	background:#F8F8F8;}
+span.OtherTok
+	{mso-style-name:OtherTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("applied_bayes_files/header.html") fs;
+	mso-footnote-continuation-separator:url("applied_bayes_files/header.html") fcs;
+	mso-endnote-separator:url("applied_bayes_files/header.html") es;
+	mso-endnote-continuation-separator:url("applied_bayes_files/header.html") ecs;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 144.0pt 72.0pt 144.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-priority:39;
+	mso-style-unhide:no;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-AU link="#0563C1" vlink="#954F72" style='tab-interval:36.0pt'>
+
+<div class=WordSection1>
+
+<p class=MsoTitle align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:0cm;margin-left:6.0cm;margin-bottom:.0001pt;mso-add-space:auto;
+text-align:center'><span style='font-size:80.0pt;mso-bidi-font-size:28.0pt'>Sleep
+Analysis<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:26.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>Applied
+Bayesian Statistics<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+class=MsoHyperlink><span style='font-size:22.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'><a href="https://benjaminphillips22.github.io/">Ben Phillips</a></span></span><span
+style='font-size:22.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;text-transform:
+uppercase'><o:p>&nbsp;</o:p></span></p>
+
+<h1 style='margin-top:0cm;margin-right:6.0cm;margin-bottom:0cm;margin-left:
+6.0cm;margin-bottom:.0001pt'><span style='font-size:24.0pt;mso-bidi-font-size:
+16.0pt;line-height:106%'>Introduction<o:p></o:p></span></h1>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>Quality of
+sleep is a significant part of maintaining a healthy lifestyle. Given its
+importance to our overall health, this analysis aims to explore the
+relationship between a dependent variable, the duration of sleep and several
+independent variables. A Bayesian approach is used to model the dependent
+variable, which has the advantages of incorporating prior information if there
+is any and obtaining credence intervals for the model parameters.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<h1 style='margin-top:0cm;margin-right:6.0cm;margin-bottom:0cm;margin-left:
+6.0cm;margin-bottom:.0001pt'><span style='font-size:24.0pt;mso-bidi-font-size:
+16.0pt;line-height:106%'>The Data<o:p></o:p></span></h1>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>The data
+for this analysis consists of one dependent variable and three independent
+variables.<o:p></o:p></span></p>
+
+<div align=center>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=150 valign=top style='width:112.7pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;background:#B4C6E7;mso-background-themecolor:
+  accent1;mso-background-themetint:102;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:12.0pt;mso-bidi-font-size:11.0pt'>Name<o:p></o:p></span></b></p>
+  </td>
+  <td width=150 valign=top style='width:112.7pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#B4C6E7;mso-background-themecolor:accent1;
+  mso-background-themetint:102;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:12.0pt;mso-bidi-font-size:11.0pt'>Status in Model<o:p></o:p></span></b></p>
+  </td>
+  <td width=150 valign=top style='width:112.7pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#B4C6E7;mso-background-themecolor:accent1;
+  mso-background-themetint:102;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:12.0pt;mso-bidi-font-size:11.0pt'>Data Type<o:p></o:p></span></b></p>
+  </td>
+  <td width=150 valign=top style='width:112.7pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#B4C6E7;mso-background-themecolor:accent1;
+  mso-background-themetint:102;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:12.0pt;mso-bidi-font-size:11.0pt'>Description<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=150 valign=top style='width:112.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  mso-bidi-font-size:11.0pt'>Minutes.Asleep<o:p></o:p></span></p>
+  </td>
+  <td width=150 valign=top style='width:112.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  mso-bidi-font-size:11.0pt'>Dependent<o:p></o:p></span></p>
+  </td>
+  <td width=150 valign=top style='width:112.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  mso-bidi-font-size:11.0pt'>Continuous<o:p></o:p></span></p>
+  </td>
+  <td width=150 valign=top style='width:112.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  mso-bidi-font-size:11.0pt'>The number of minutes of sleep.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=150 valign=top style='width:112.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  mso-bidi-font-size:11.0pt'>Resistance.Training<o:p></o:p></span></p>
+  </td>
+  <td width=150 valign=top style='width:112.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  mso-bidi-font-size:11.0pt'>Independent<o:p></o:p></span></p>
+  </td>
+  <td width=150 valign=top style='width:112.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  mso-bidi-font-size:11.0pt'>Binary<o:p></o:p></span></p>
+  </td>
+  <td width=150 valign=top style='width:112.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  mso-bidi-font-size:11.0pt'>Was resistance training conducted on that day. (1
+  = yes, 0 = no)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=150 valign=top style='width:112.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  mso-bidi-font-size:11.0pt'>Meditation<o:p></o:p></span></p>
+  </td>
+  <td width=150 valign=top style='width:112.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  mso-bidi-font-size:11.0pt'>Independent<o:p></o:p></span></p>
+  </td>
+  <td width=150 valign=top style='width:112.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  mso-bidi-font-size:11.0pt'>Binary<o:p></o:p></span></p>
+  </td>
+  <td width=150 valign=top style='width:112.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  mso-bidi-font-size:11.0pt'>Was meditation practiced before bed that <span
+  class=GramE>day.</span> (1 = yes, 0 = no)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'>
+  <td width=150 valign=top style='width:112.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  mso-bidi-font-size:11.0pt'>Soy.Milk<o:p></o:p></span></p>
+  </td>
+  <td width=150 valign=top style='width:112.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  mso-bidi-font-size:11.0pt'>Independent<o:p></o:p></span></p>
+  </td>
+  <td width=150 valign=top style='width:112.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  mso-bidi-font-size:11.0pt'>Binary<o:p></o:p></span></p>
+  </td>
+  <td width=150 valign=top style='width:112.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  mso-bidi-font-size:11.0pt'>Was a warm glass of soy milk consumed before bed
+  that <span class=GramE>day.</span> (1 = yes, 0 = no)<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>The data
+for the duration of sleep, ‘Minutes.Asleep’ was obtained from my personal <span
+class=SpellE>fitbit</span> device. The three independent variables were
+recorded in my calendar. This data is from the month of September 2018. There
+were two dates that the <span class=SpellE>fitbit</span> did not record data,
+the 14<sup>th</sup> and the 19<sup>th</sup>. This leaves 29 data points
+available for analysis.</span> <span style='font-size:18.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'>Figure 1 shows the duration of sleep for each day in
+September.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center;page-break-after:avoid'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_1" o:spid="_x0000_i1038" type="#_x0000_t75"
+ style='width:296.25pt;height:267.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="applied_bayes_files/image001.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=395 height=357
+src="applied_bayes_files/image001.png" v:shapes="Picture_x0020_1"><![endif]></span><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:10.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt'>Figure </span><!--[if supportFields]><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt;mso-no-proof:yes'><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>SEQ Figure \* ARABIC <span style='mso-element:
+field-separator'></span></span><![endif]--><span style='font-size:14.0pt;
+mso-bidi-font-size:9.0pt;mso-no-proof:yes'>1</span><!--[if supportFields]><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt;mso-no-proof:yes'><span
+style='mso-element:field-end'></span></span><![endif]--><span style='font-size:
+14.0pt;mso-bidi-font-size:9.0pt'>; The horizontal line indicates the mean<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>One concern
+with using this data was that the duration of sleep might not be independent
+from previous nights sleep. Specifically, was the concern that a below average
+duration of sleep would be followed by an above average duration, which would
+then be followed by a below average duration, creating a negative correlation
+with a lag of 1. To check this, the autocorrelation function was used. Figure 2
+shows that there is not a significant correlation between duration of sleep on
+a specific night and nights before it.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center;page-break-after:avoid'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_2" o:spid="_x0000_i1037"
+ type="#_x0000_t75" style='width:296.25pt;height:267.75pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="applied_bayes_files/image002.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=395 height=357
+src="applied_bayes_files/image002.png" v:shapes="Picture_x0020_2"><![endif]></span><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:10.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt'>Figure </span><!--[if supportFields]><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt;mso-no-proof:yes'><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>SEQ Figure \* ARABIC <span style='mso-element:
+field-separator'></span></span><![endif]--><span style='font-size:14.0pt;
+mso-bidi-font-size:9.0pt;mso-no-proof:yes'>2</span><!--[if supportFields]><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt;mso-no-proof:yes'><span
+style='mso-element:field-end'></span></span><![endif]--><span style='font-size:
+14.0pt;mso-bidi-font-size:9.0pt'>; autocorrelation plot for minutes asleep<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>Figures 3,
+4 and 5 show the days that resistance training occurred, meditation was
+practiced, and soy milk was drunk, respectively. It looks like duration of
+sleep was below average for training and soy milk days and above average for
+meditation days, although these plots don’t show any interaction between variables.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center;page-break-after:avoid'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_6" o:spid="_x0000_i1036"
+ type="#_x0000_t75" style='width:337.5pt;height:304.5pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="applied_bayes_files/image003.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=450 height=406
+src="applied_bayes_files/image003.png" v:shapes="Picture_x0020_6"><![endif]></span><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:10.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt'>Figure </span><!--[if supportFields]><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt;mso-no-proof:yes'><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>SEQ Figure \* ARABIC <span style='mso-element:
+field-separator'></span></span><![endif]--><span style='font-size:14.0pt;
+mso-bidi-font-size:9.0pt;mso-no-proof:yes'>3</span><!--[if supportFields]><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt;mso-no-proof:yes'><span
+style='mso-element:field-end'></span></span><![endif]--><span style='font-size:
+14.0pt;mso-bidi-font-size:9.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center;page-break-after:avoid'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_4" o:spid="_x0000_i1035"
+ type="#_x0000_t75" style='width:296.25pt;height:267.75pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="applied_bayes_files/image004.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=395 height=357
+src="applied_bayes_files/image004.png" v:shapes="Picture_x0020_4"><![endif]></span><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:10.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt'>Figure </span><!--[if supportFields]><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt;mso-no-proof:yes'><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>SEQ Figure \* ARABIC <span style='mso-element:
+field-separator'></span></span><![endif]--><span style='font-size:14.0pt;
+mso-bidi-font-size:9.0pt;mso-no-proof:yes'>4</span><!--[if supportFields]><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt;mso-no-proof:yes'><span
+style='mso-element:field-end'></span></span><![endif]--><span style='font-size:
+14.0pt;mso-bidi-font-size:9.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center;page-break-after:avoid'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_5" o:spid="_x0000_i1034"
+ type="#_x0000_t75" style='width:296.25pt;height:267.75pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="applied_bayes_files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=395 height=357
+src="applied_bayes_files/image005.png" v:shapes="Picture_x0020_5"><![endif]></span><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:10.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt'>Figure </span><!--[if supportFields]><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt;mso-no-proof:yes'><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>SEQ Figure \* ARABIC <span style='mso-element:
+field-separator'></span></span><![endif]--><span style='font-size:14.0pt;
+mso-bidi-font-size:9.0pt;mso-no-proof:yes'>5</span><!--[if supportFields]><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt;mso-no-proof:yes'><span
+style='mso-element:field-end'></span></span><![endif]--><span style='font-size:
+14.0pt;mso-bidi-font-size:9.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<h1 style='margin-top:0cm;margin-right:6.0cm;margin-bottom:0cm;margin-left:
+6.0cm;margin-bottom:.0001pt'><span style='font-size:24.0pt;mso-bidi-font-size:
+16.0pt;line-height:106%'>Bayesian Analysis<o:p></o:p></span></h1>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>The
+dependent variable is modelled by the normal distribution, where the mean of
+that distribution is distributed according to a linear relationship with the
+independent variables, which can be seen in the model diagram in figure 6. The
+parameters of the model, </span><span style='font-size:18.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%;mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'>&#946;0<b
+style='mso-bidi-font-weight:normal'>,</b> &#946;1, &#946;2 and &#946;3 are
+modelled by the normal distribution with uninformative priors. The variance of
+the dependent variable, &#975;, is modelled by the exponential distribution,
+because the standard deviation can only be positive. This parameter too has an
+uninformative prior.</span><span style='font-size:18.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center;page-break-after:avoid'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:20.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_7"
+ o:spid="_x0000_i1033" type="#_x0000_t75" style='width:451.5pt;height:238.5pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="applied_bayes_files/image006.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=602 height=318
+src="applied_bayes_files/image022.jpg" v:shapes="Picture_x0020_7"><![endif]></span></b><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:10.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt'>Figure </span><!--[if supportFields]><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt;mso-no-proof:yes'><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>SEQ Figure \* ARABIC <span style='mso-element:
+field-separator'></span></span><![endif]--><span style='font-size:14.0pt;
+mso-bidi-font-size:9.0pt;mso-no-proof:yes'>6</span><!--[if supportFields]><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt;mso-no-proof:yes'><span
+style='mso-element:field-end'></span></span><![endif]--><span style='font-size:
+14.0pt;mso-bidi-font-size:9.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:6.0cm;margin-bottom:8.0pt;
+margin-left:6.0cm'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'>Create the Data List<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:6.0cm;margin-bottom:8.0pt;
+margin-left:6.0cm'><span class=CommentTok><span style='font-size:12.0pt;
+mso-bidi-font-size:11.0pt;line-height:106%'># getting started on <span
+class=SpellE>bayesian</span> methods.</span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:11.0pt;line-height:106%'><br>
+</span><span class=SpellE><span class=NormalTok><span style='font-size:12.0pt;
+mso-bidi-font-size:11.0pt;line-height:106%'>dataList</span></span></span><span
+class=NormalTok><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'> =</span></span><span class=StringTok><span style='font-size:
+12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'> </span></span><span
+class=GramE><span class=KeywordTok><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'>list</span></span><span class=NormalTok><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>(</span></span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><br>
+</span><span class=NormalTok><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'><span style='mso-spacerun:yes'>  </span></span></span><span
+class=SpellE><span class=DataTypeTok><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'>Ntotal</span></span></span><span class=DataTypeTok><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'> =</span></span><span
+class=NormalTok><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'> </span></span><span class=KeywordTok><span style='font-size:
+12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>dim</span></span><span
+class=NormalTok><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'>(df)[</span></span><span class=DecValTok><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>1</span></span><span
+class=NormalTok><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'>],</span></span><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'><br>
+</span><span class=NormalTok><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'><span style='mso-spacerun:yes'>  </span></span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><br>
+</span><span class=NormalTok><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'><span style='mso-spacerun:yes'>  </span></span></span><span
+class=DataTypeTok><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'>y =</span></span><span class=NormalTok><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'> <span
+class=SpellE>df<span class=OperatorTok><span style='mso-ansi-font-size:12.0pt;
+line-height:106%'>$</span></span>Minutes.Asleep</span>,</span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><br>
+</span><span class=NormalTok><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'><span style='mso-spacerun:yes'>  </span></span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><br>
+</span><span class=NormalTok><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'><span style='mso-spacerun:yes'>  </span></span></span><span
+class=SpellE><span class=DataTypeTok><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'>Resistance.Training</span></span></span><span
+class=DataTypeTok><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'> =</span></span><span class=NormalTok><span style='font-size:
+12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'> <span class=SpellE>df<span
+class=OperatorTok><span style='mso-ansi-font-size:12.0pt;line-height:106%'>$</span></span>Resistance.Training</span>,</span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><br>
+</span><span class=NormalTok><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'><span style='mso-spacerun:yes'>  </span></span></span><span
+class=DataTypeTok><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'>Meditation =</span></span><span class=NormalTok><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'> <span
+class=SpellE>df<span class=OperatorTok><span style='mso-ansi-font-size:12.0pt;
+line-height:106%'>$</span></span>Meditation</span>,</span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><br>
+</span><span class=NormalTok><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'><span style='mso-spacerun:yes'>  </span></span></span><span
+class=SpellE><span class=DataTypeTok><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'>Soy.Milk</span></span></span><span class=DataTypeTok><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'> =</span></span><span
+class=NormalTok><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'> <span class=SpellE>df<span class=OperatorTok><span
+style='mso-ansi-font-size:12.0pt;line-height:106%'>$</span></span>Soy.Milk</span></span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><br>
+</span><span class=NormalTok><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'>)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:6.0cm;margin-bottom:8.0pt;
+margin-left:6.0cm'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'><br>
+Specify the Model<br>
+<br>
+</span><span class=SpellE><span class=NormalTok>modelString</span></span><span
+class=NormalTok> =</span><span class=StringTok> &quot;</span><br>
+<span class=StringTok># open quote for <span class=SpellE>modelString</span></span><br>
+<span class=StringTok>model {</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>for ( <span
+class=SpellE>i</span> in 1:Ntotal ) {</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>y[<span
+class=SpellE>i</span>] ~ <span class=SpellE>dnorm</span>( mu[<span
+class=SpellE>i</span>] , pow(sigma, -2) )</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>mu[<span
+class=SpellE>i</span>] &lt;- b0 + b1*<span class=SpellE>Resistance.Training</span>[<span
+class=SpellE>i</span>] + b2*Meditation[<span class=SpellE>i</span>] + b3*<span
+class=SpellE>Soy.Milk</span>[<span class=SpellE>i</span>]</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>}</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>sigma ~ <span
+class=SpellE>dexp</span>(0.01)</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>b0 ~ <span
+class=SpellE>dnorm</span>(0, pow(1000000, -2))</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>b1 ~ <span
+class=SpellE>dnorm</span>(0, pow(1000000, -2))</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>b2 ~ <span
+class=SpellE>dnorm</span>(0, pow(1000000, -2))</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>b3 ~ <span
+class=SpellE>dnorm</span>(0, pow(1000000, -2))</span><br>
+<span class=StringTok>}</span><br>
+<span class=StringTok>&quot;</span><br>
+<span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><br>
+<br>
+</span><span class=SpellE><span class=KeywordTok><span style='font-size:12.0pt;
+mso-bidi-font-size:11.0pt;line-height:106%'>writeLines</span></span></span><span
+class=NormalTok><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'>( <span class=SpellE>modelString</span> , </span></span><span
+class=DataTypeTok><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'>con=</span></span><span class=StringTok><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>&quot;TEMPmodel.txt&quot;</span></span><span
+class=NormalTok><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'> ) </span></span><span class=CommentTok><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:106%'># write to
+file</span></span><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'><br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]></span><span style='font-size:18.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>Details for
+the <span class=SpellE>markov</span> chain monte <span class=SpellE>carlo</span>
+process. The thin step is set to 100 after discovering that a lower thin step
+resulted in highly correlated values with previous steps in the parameter
+estimates.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:6.0cm;margin-bottom:8.0pt;
+margin-left:6.0cm'><span style='font-size:18.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'><br>
+</span><span class=KeywordTok>library</span><span class=NormalTok>(<span
+class=SpellE>rjags</span>)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:6.0cm;margin-bottom:8.0pt;
+margin-left:6.0cm'><span class=SpellE><span class=NormalTok>adaptSteps</span></span><span
+class=NormalTok> =</span><span class=StringTok> </span><span class=DecValTok>1000</span><span
+class=NormalTok><span style='mso-spacerun:yes'>            </span></span><span
+class=CommentTok># Number of steps to &quot;tune&quot; the samplers.</span><br>
+<span class=SpellE><span class=NormalTok>burnInSteps</span></span><span
+class=NormalTok> =</span><span class=StringTok> </span><span class=DecValTok>1000</span><span
+class=NormalTok><span style='mso-spacerun:yes'>          </span><span
+style='mso-spacerun:yes'> </span></span><span class=CommentTok># Number of
+steps to &quot;burn-in&quot; the samplers.</span><br>
+<span class=SpellE><span class=NormalTok>nChains</span></span><span
+class=NormalTok> =</span><span class=StringTok> </span><span class=DecValTok>4</span><span
+class=NormalTok><span style='mso-spacerun:yes'>                  </span></span><span
+class=CommentTok># Number of chains to run.</span><br>
+<span class=SpellE><span class=NormalTok>numSavedSteps</span></span><span
+class=NormalTok>=</span><span class=DecValTok>10000</span><span
+class=NormalTok><span style='mso-spacerun:yes'>          </span></span><span
+class=CommentTok># Total number of steps in chains to save.</span><br>
+<span class=SpellE><span class=NormalTok>thinSteps</span></span><span
+class=NormalTok>=</span><span class=DecValTok>100</span><span class=NormalTok><span
+style='mso-spacerun:yes'>             </span></span><span class=CommentTok>#
+Number of steps to &quot;thin&quot; (1=keep every step).</span><br>
+<span class=SpellE><span class=NormalTok>nPerChain</span></span><span
+class=NormalTok> =</span><span class=StringTok> </span><span class=KeywordTok>ceiling</span><span
+class=NormalTok>( ( <span class=SpellE>numSavedSteps</span> </span><span
+class=OperatorTok>*</span><span class=StringTok> </span><span class=SpellE><span
+class=NormalTok>thinSteps</span></span><span class=NormalTok> ) </span><span
+class=OperatorTok>/</span><span class=StringTok> </span><span class=SpellE><span
+class=NormalTok>nChains</span></span><span class=NormalTok> ) </span><span
+class=CommentTok># Steps per chain.</span><br>
+<br>
+<br>
+<span class=CommentTok># Compile the model</span><br>
+<span class=SpellE><span class=NormalTok>jagsModel</span></span><span
+class=NormalTok> =</span><span class=StringTok> </span><span class=SpellE><span
+class=KeywordTok>jags.model</span></span><span class=NormalTok>(</span><span
+class=DataTypeTok>file=</span><span class=StringTok>&quot;TEMPmodel.txt&quot;</span><span
+class=NormalTok>,</span><br>
+<span class=NormalTok><span style='mso-spacerun:yes'>                      
+</span></span><span class=DataTypeTok>data=</span><span class=SpellE><span
+class=NormalTok>dataList</span></span><span class=NormalTok>,<span
+style='mso-spacerun:yes'>      </span></span><br>
+<span class=NormalTok><span style='mso-spacerun:yes'>                      
+</span></span><span class=SpellE><span class=DataTypeTok>n.chains</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=NormalTok>nChains</span></span><span
+class=NormalTok>,</span><br>
+<span class=NormalTok><span style='mso-spacerun:yes'>                      
+</span></span><span class=SpellE><span class=DataTypeTok>n.adapt</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=NormalTok>adaptSteps</span></span><br>
+<span class=NormalTok><span style='mso-spacerun:yes'>                      
+</span>)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:6.0cm;margin-bottom:8.0pt;
+margin-left:6.0cm'><br>
+<span class=GramE><span class=KeywordTok>update</span><span class=NormalTok>( <span
+class=SpellE>jagsModel</span></span></span><span class=NormalTok> , </span><span
+class=SpellE><span class=DataTypeTok>n.iter</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=NormalTok>burnInSteps</span></span><span
+class=NormalTok>)</span><br>
+<br>
+<span class=SpellE><span class=NormalTok>codaSamples</span></span><span
+class=NormalTok> =</span><span class=StringTok> </span><span class=SpellE><span
+class=KeywordTok>coda.samples</span></span><span class=NormalTok>( </span><span
+class=DataTypeTok>model =</span><span class=NormalTok> <span class=SpellE>jagsModel</span>,</span><br>
+<span class=NormalTok><span
+style='mso-spacerun:yes'>                            </span></span><span
+class=SpellE><span class=DataTypeTok>variable.names</span></span><span
+class=DataTypeTok>=</span><span class=KeywordTok>c</span><span class=NormalTok>(</span><span
+class=StringTok>&quot;sigma&quot;</span><span class=NormalTok>, </span><span
+class=StringTok>&quot;b0&quot;</span><span class=NormalTok>, </span><span
+class=StringTok>&quot;b1&quot;</span><span class=NormalTok>, </span><span
+class=StringTok>&quot;b2&quot;</span><span class=NormalTok>, </span><span
+class=StringTok>&quot;b3&quot;</span><span class=NormalTok>),</span><br>
+<span class=NormalTok><span
+style='mso-spacerun:yes'>                            </span></span><span
+class=SpellE><span class=DataTypeTok>n.iter</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=NormalTok>nPerChain</span></span><span
+class=NormalTok>, </span><span class=DataTypeTok>thin =</span><span
+class=NormalTok> <span class=SpellE>thinSteps</span>)</span><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><span style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:
+106%'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>Figures 7
+through 11 show the diagnostic plots for the model parameter variables. Each
+shows good mixing between the four chains as well as no autocorrelation with
+lag values. The density curves for all the chains have converged to a similar
+shape. This indicates that <span class=SpellE>markov</span> chain monte <span
+class=SpellE>carlo</span> process has been implemented in an appropriate way.<o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:10.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center;page-break-after:avoid'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_19" o:spid="_x0000_i1032"
+ type="#_x0000_t75" style='width:450.75pt;height:322.5pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="applied_bayes_files/image008.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=601 height=430
+src="applied_bayes_files/image023.jpg" v:shapes="Picture_x0020_19"><![endif]></span><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:10.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt'>Figure 7<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center;page-break-after:avoid'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_21" o:spid="_x0000_i1031"
+ type="#_x0000_t75" style='width:450.75pt;height:322.5pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="applied_bayes_files/image010.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=601 height=430
+src="applied_bayes_files/image024.jpg" v:shapes="Picture_x0020_21"><![endif]></span><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:10.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt'>Figure 8<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center;page-break-after:avoid'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_23" o:spid="_x0000_i1030"
+ type="#_x0000_t75" style='width:450.75pt;height:322.5pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="applied_bayes_files/image012.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=601 height=430
+src="applied_bayes_files/image025.jpg" v:shapes="Picture_x0020_23"><![endif]></span><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:10.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt'>Figure 9<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center;page-break-after:avoid'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_25" o:spid="_x0000_i1029"
+ type="#_x0000_t75" style='width:450.75pt;height:322.5pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="applied_bayes_files/image014.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=601 height=430
+src="applied_bayes_files/image026.jpg" v:shapes="Picture_x0020_25"><![endif]></span><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:10.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt'>Figure 10<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center;page-break-after:avoid'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center;page-break-after:avoid'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_27" o:spid="_x0000_i1028"
+ type="#_x0000_t75" style='width:450.75pt;height:322.5pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="applied_bayes_files/image016.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=601 height=430
+src="applied_bayes_files/image027.jpg" v:shapes="Picture_x0020_27"><![endif]></span><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:10.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt'>Figure 11<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<h1 style='margin-top:0cm;margin-right:6.0cm;margin-bottom:0cm;margin-left:
+6.0cm;margin-bottom:.0001pt'><span style='font-size:24.0pt;mso-bidi-font-size:
+16.0pt;line-height:106%'>Results<o:p></o:p></span></h1>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>The
+high-intensity credence intervals for the model parameters are shown in figures
+12 and 13.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>These
+results can be expressed as the linear approximation;<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:
+106%'>Minutes.Asleep ~ </span></b><span style='font-size:18.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'>462 – 30.2*<b style='mso-bidi-font-weight:normal'>Resistance.Training
+</b>+ 21.9*<b style='mso-bidi-font-weight:normal'>Meditation</b> + 12.9*<b
+style='mso-bidi-font-weight:normal'>Soy.Milk.<o:p></o:p></b></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><a name="_Hlk526429830"><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;mso-bidi-font-family:
+Calibri;mso-bidi-theme-font:minor-latin'>The 95% confidence interval for</span></a><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;mso-bidi-font-family:
+Calibri;mso-bidi-theme-font:minor-latin'> &#946;</span><span style='font-size:
+18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>1 contains 0, so there isn’t
+strong evidence that resistance training is associated with less sleep, but
+there is slight evidence, as most of the credence values are for negative
+values. Similarly,</span><span style='font-size:18.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%;mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'>
+the 95% confidence interval for</span><span style='font-size:18.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%'> </span><span style='font-size:18.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%;mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'>&#946;</span><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>2 also contains
+0, but most of the credence is placed on positive values, indicating slight
+evidence that mediation is associated with more sleep.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>The
+variance of the dependent variable has a mode of 42.6 which is larger than any
+of the </span><span style='font-size:18.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%;mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'>&#946;
+coefficients. This indicates that there is still a large amount of uncertainty
+around the duration of sleep, even given information about activities from that
+day.</span><span style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:
+106%'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center;page-break-after:avoid'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_28" o:spid="_x0000_i1027"
+ type="#_x0000_t75" style='width:450.75pt;height:322.5pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="applied_bayes_files/image018.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=601 height=430
+src="applied_bayes_files/image028.jpg" v:shapes="Picture_x0020_28"><![endif]></span><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:10.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt'>Figure 12<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center;page-break-after:avoid'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_29" o:spid="_x0000_i1026"
+ type="#_x0000_t75" style='width:296.25pt;height:267.75pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="applied_bayes_files/image020.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=395 height=357
+src="applied_bayes_files/image020.png" v:shapes="Picture_x0020_29"><![endif]></span><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:10.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt'>Figure 13<o:p></o:p></span></p>
+
+<span style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;
+font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:
+"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+mso-ansi-language:EN-AU;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br
+clear=all style='mso-special-character:line-break;page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>Figure 14
+shows the sleep durations predicated by the linear model. The shaded region is
+the 95% confidence interval which is obtained using the mode of the parameter
+estimate ‘sigma’. All the actual data points fall within this interval, as
+expected.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center;page-break-after:avoid'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_30" o:spid="_x0000_i1025"
+ type="#_x0000_t75" style='width:375pt;height:338.25pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="applied_bayes_files/image021.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=500 height=451
+src="applied_bayes_files/image021.png" v:shapes="Picture_x0020_30"><![endif]></span><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:10.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:9.0pt'>Figure 14<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<span style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;
+font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:
+"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+mso-ansi-language:EN-AU;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br
+clear=all style='mso-special-character:line-break;page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:24.0pt;mso-bidi-font-size:16.0pt;line-height:106%;font-family:
+"Calibri Light",sans-serif;mso-ascii-theme-font:major-latin;mso-fareast-font-family:
+"Times New Roman";mso-fareast-theme-font:major-fareast;mso-hansi-theme-font:
+major-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:major-bidi;
+color:#2F5496;mso-themecolor:accent1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></p>
+
+<h1 style='margin-top:0cm;margin-right:6.0cm;margin-bottom:0cm;margin-left:
+6.0cm;margin-bottom:.0001pt'><span style='font-size:24.0pt;mso-bidi-font-size:
+16.0pt;line-height:106%'>Discussion<o:p></o:p></span></h1>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>There
+doesn’t appear to be <span class=GramE>sufficient</span> evidence to make any
+strong conclusions. In cases like this, where there is slight evidence, it can
+be useful to continue to collect data.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>It seems
+that meditation may increase sleep duration. I will continue to meditate before
+bed occasionally, as I have been. While Resistance Training may result in
+reduced sleep duration, it is not something I wish to stop doing. Previously I
+have conducted my work outs at what ever time of day is convenient. It might be
+that the time of day of the workout influences sleep, perhaps with later work
+outs impacting on sleep. A potential next step could be to only work out in the
+mornings and see if the negative association continues.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'>There isn’t
+much to say about the consumption of warm soy milk before bed. Given that there
+isn’t much evidence either way, I will continue to drink it when I feel
+inclined to do so.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<span style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%;
+font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:
+"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+mso-ansi-language:EN-AU;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br
+clear=all style='mso-special-character:line-break;page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:6.0cm;
+margin-bottom:8.0pt;margin-left:6.0cm;text-align:center'><span
+style='font-size:18.0pt;mso-bidi-font-size:11.0pt;line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<h1 style='margin-top:0cm;margin-right:6.0cm;margin-bottom:0cm;margin-left:
+6.0cm;margin-bottom:.0001pt'><span style='font-size:24.0pt;mso-bidi-font-size:
+16.0pt;line-height:106%'>Appendix<o:p></o:p></span></h1>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:6.0cm;margin-bottom:8.0pt;
+margin-left:6.0cm'><span style='font-size:18.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'>Code used for this assignment.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:6.0cm;margin-bottom:8.0pt;
+margin-left:6.0cm'><span style='font-size:18.0pt;mso-bidi-font-size:11.0pt;
+line-height:106%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=SourceCode style='margin-top:0cm;margin-right:6.0cm;margin-bottom:
+10.0pt;margin-left:6.0cm'><span class=KeywordTok>library</span><span
+class=NormalTok>(<span class=SpellE>lubridate</span>)</span><br>
+<span class=KeywordTok>library</span><span class=NormalTok>(<span class=SpellE>dplyr</span>)</span><br>
+<span class=KeywordTok>library</span><span class=NormalTok>(<span class=SpellE>tidyr</span>)</span><br>
+<span class=KeywordTok>library</span><span class=NormalTok>(ggplot2)</span><br>
+<br>
+<span class=NormalTok>sleep &lt;-</span><span class=StringTok> </span><span
+class=KeywordTok>read.csv</span><span class=NormalTok>(</span><span
+class=DataTypeTok>file =</span><span class=NormalTok> </span><span
+class=StringTok>'Sleep_Stats.csv'</span><span class=NormalTok>)</span><br>
+<span class=KeywordTok>View</span><span class=NormalTok>(sleep)</span><br>
+<br>
+<span class=NormalTok>activity &lt;-</span><span class=StringTok> </span><span
+class=KeywordTok>read.csv</span><span class=NormalTok>(</span><span
+class=DataTypeTok>file =</span><span class=NormalTok> </span><span
+class=StringTok>'activity_stats.csv'</span><span class=NormalTok>) </span><span
+class=OperatorTok>%&gt;%</span><span class=StringTok> </span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=KeywordTok>mutate</span><span class=NormalTok>(</span><span
+class=DataTypeTok>Date =</span><span class=NormalTok> </span><span
+class=SpellE><span class=KeywordTok>dmy</span></span><span class=NormalTok>(Date))
+</span><span class=OperatorTok>%&gt;%</span><span class=StringTok> </span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=KeywordTok>mutate</span><span class=NormalTok>(</span><span class=SpellE><span
+class=DataTypeTok>Resistance.Training</span></span><span class=DataTypeTok> =</span><span
+class=NormalTok> </span><span class=KeywordTok>factor</span><span
+class=NormalTok>(<span class=SpellE>Resistance.Training</span>)) </span><span
+class=OperatorTok>%&gt;%</span><span class=StringTok> </span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=KeywordTok>mutate</span><span class=NormalTok>(</span><span
+class=DataTypeTok>Sprints =</span><span class=NormalTok> </span><span
+class=KeywordTok>factor</span><span class=NormalTok>(Sprints)) </span><span
+class=OperatorTok>%&gt;%</span><span class=StringTok> </span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=KeywordTok>mutate</span><span class=NormalTok>(</span><span
+class=DataTypeTok>Meditation =</span><span class=NormalTok> </span><span
+class=KeywordTok>factor</span><span class=NormalTok>(Meditation)) </span><span
+class=OperatorTok>%&gt;%</span><span class=StringTok> </span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=KeywordTok>mutate</span><span class=NormalTok>(</span><span class=SpellE><span
+class=DataTypeTok>Soy.Milk</span></span><span class=DataTypeTok> =</span><span
+class=NormalTok> </span><span class=KeywordTok>factor</span><span
+class=NormalTok>(<span class=SpellE>Soy.Milk</span>))</span><br>
+<span class=KeywordTok>View</span><span class=NormalTok>(activity)</span><br>
+<br>
+<span class=NormalTok>sleep_</span><span class=DecValTok>1</span><span
+class=NormalTok> &lt;-</span><span class=StringTok> </span><span
+class=NormalTok>sleep </span><span class=OperatorTok>%&gt;%</span><span
+class=StringTok> </span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>group_by</span></span><span
+class=NormalTok>(Date) </span><span class=OperatorTok>%&gt;%</span><span
+class=StringTok> </span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=KeywordTok>summarise</span><span class=NormalTok>(</span><span
+class=SpellE><span class=DataTypeTok>Minutes.Asleep</span></span><span
+class=DataTypeTok> =</span><span class=NormalTok> </span><span
+class=KeywordTok>sum</span><span class=NormalTok>(<span class=SpellE>Minutes.Asleep</span>))
+</span><span class=OperatorTok>%&gt;%</span><span class=StringTok> </span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=KeywordTok>mutate</span><span class=NormalTok>(</span><span
+class=DataTypeTok>Date =</span><span class=NormalTok> </span><span
+class=SpellE><span class=KeywordTok>dmy</span></span><span class=NormalTok>(Date))</span><br>
+<span class=KeywordTok>View</span><span class=NormalTok>(sleep_</span><span
+class=DecValTok>1</span><span class=NormalTok>)</span><br>
+<br>
+<span class=KeywordTok>plot</span><span class=NormalTok>(sleep_</span><span
+class=DecValTok>1</span><span class=OperatorTok>$</span><span class=NormalTok>Date,
+sleep_</span><span class=DecValTok>1</span><span class=OperatorTok>$</span><span
+class=NormalTok>Minutes.Asleep)</span><br>
+<br>
+<span class=NormalTok>g1 &lt;-</span><span class=StringTok> </span><span
+class=SpellE><span class=KeywordTok>ggplot</span></span><span class=NormalTok>(sleep_</span><span
+class=DecValTok>1</span><span class=NormalTok>, </span><span class=DataTypeTok>mapping
+=</span><span class=NormalTok> </span><span class=SpellE><span
+class=KeywordTok>aes</span></span><span class=NormalTok>(</span><span
+class=DataTypeTok>x=</span><span class=NormalTok>Date, </span><span
+class=DataTypeTok>y=</span><span class=SpellE><span class=NormalTok>Minutes.Asleep</span></span><span
+class=NormalTok>)) </span><span class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>geom_point</span></span><span
+class=NormalTok>() </span><span class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>geom_line</span></span><span
+class=NormalTok>() </span><span class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>geom_hline</span></span><span
+class=NormalTok>(</span><span class=SpellE><span class=DataTypeTok>yintercept</span></span><span
+class=DataTypeTok> =</span><span class=NormalTok> </span><span
+class=KeywordTok>mean</span><span class=NormalTok>(sleep_</span><span
+class=DecValTok>1</span><span class=OperatorTok>$</span><span class=NormalTok>Minutes.Asleep,
+</span><span class=DataTypeTok>na.rm =</span><span class=NormalTok> </span><span
+class=OtherTok>TRUE</span><span class=NormalTok>))</span><br>
+<span class=NormalTok>g1</span><br>
+<br>
+<span class=NormalTok>sleep_</span><span class=DecValTok>1</span><span
+class=NormalTok> </span><span class=OperatorTok>%&gt;%</span><span
+class=StringTok> </span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=KeywordTok>filter</span><span class=NormalTok>(</span><span
+class=OperatorTok>!</span><span class=KeywordTok>is.na</span><span
+class=NormalTok>(<span class=SpellE>Minutes.Asleep</span>)) </span><span
+class=OperatorTok>%&gt;%</span><span class=StringTok> </span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=KeywordTok>select</span><span class=NormalTok>(<span class=SpellE>Minutes.Asleep</span>)
+</span><span class=OperatorTok>%&gt;%</span><span class=StringTok> </span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>unlist</span></span><span class=NormalTok>()
+</span><span class=OperatorTok>%&gt;%</span><span class=StringTok> </span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>acf</span></span><span class=NormalTok>()</span><br>
+<br>
+<span class=CommentTok># looks OK!</span><br>
+<br>
+<br>
+<span class=CommentTok># combine the datasets</span><br>
+<br>
+<span class=NormalTok>df &lt;-</span><span class=StringTok> </span><span
+class=SpellE><span class=KeywordTok>merge.data.frame</span></span><span
+class=NormalTok>(sleep_</span><span class=DecValTok>1</span><span
+class=NormalTok>, activity, </span><span class=DataTypeTok>by =</span><span
+class=NormalTok> </span><span class=StringTok>'Date'</span><span
+class=NormalTok>)</span><br>
+<span class=KeywordTok>View</span><span class=NormalTok>(df)</span><br>
+<br>
+<span class=NormalTok>g2 &lt;-</span><span class=StringTok> </span><span
+class=SpellE><span class=KeywordTok>ggplot</span></span><span class=NormalTok>(df,
+</span><span class=DataTypeTok>mapping =</span><span class=NormalTok> </span><span
+class=SpellE><span class=KeywordTok>aes</span></span><span class=NormalTok>(</span><span
+class=DataTypeTok>x=</span><span class=NormalTok>Date, </span><span
+class=DataTypeTok>y=</span><span class=SpellE><span class=NormalTok>Minutes.Asleep</span></span><span
+class=NormalTok>)) </span><span class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>geom_point</span></span><span
+class=NormalTok>(</span><span class=DataTypeTok>data =</span><span
+class=NormalTok> df, </span><span class=SpellE><span class=KeywordTok>aes</span></span><span
+class=NormalTok>(</span><span class=DataTypeTok>size=</span><span class=SpellE><span
+class=NormalTok>Resistance.Training</span></span><span class=NormalTok>, </span><span
+class=DataTypeTok>colour=</span><span class=SpellE><span class=NormalTok>Resistance.Training</span></span><span
+class=NormalTok>)) </span><span class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>geom_line</span></span><span
+class=NormalTok>() </span><span class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>geom_hline</span></span><span
+class=NormalTok>(</span><span class=SpellE><span class=DataTypeTok>yintercept</span></span><span
+class=DataTypeTok> =</span><span class=NormalTok> </span><span
+class=KeywordTok>mean</span><span class=NormalTok>(sleep_</span><span
+class=DecValTok>1</span><span class=OperatorTok>$</span><span class=NormalTok>Minutes.Asleep,
+</span><span class=DataTypeTok>na.rm =</span><span class=NormalTok> </span><span
+class=OtherTok>TRUE</span><span class=NormalTok>)) </span><span
+class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=KeywordTok>labs</span><span class=NormalTok>(</span><span
+class=DataTypeTok>title =</span><span class=NormalTok> </span><span
+class=StringTok>'Resistance Training'</span><span class=NormalTok>)</span><br>
+<span class=NormalTok>g2</span><br>
+<br>
+<span class=NormalTok>g3 &lt;-</span><span class=StringTok> </span><span
+class=SpellE><span class=KeywordTok>ggplot</span></span><span class=NormalTok>(df,
+</span><span class=DataTypeTok>mapping =</span><span class=NormalTok> </span><span
+class=SpellE><span class=KeywordTok>aes</span></span><span class=NormalTok>(</span><span
+class=DataTypeTok>x=</span><span class=NormalTok>Date, </span><span
+class=DataTypeTok>y=</span><span class=SpellE><span class=NormalTok>Minutes.Asleep</span></span><span
+class=NormalTok>)) </span><span class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>geom_point</span></span><span
+class=NormalTok>(</span><span class=DataTypeTok>data =</span><span
+class=NormalTok> df, </span><span class=SpellE><span class=KeywordTok>aes</span></span><span
+class=NormalTok>(</span><span class=DataTypeTok>size=</span><span
+class=NormalTok>Meditation, </span><span class=DataTypeTok>colour=</span><span
+class=NormalTok>Meditation)) </span><span class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>geom_line</span></span><span
+class=NormalTok>() </span><span class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>geom_hline</span></span><span
+class=NormalTok>(</span><span class=SpellE><span class=DataTypeTok>yintercept</span></span><span
+class=DataTypeTok> =</span><span class=NormalTok> </span><span
+class=KeywordTok>mean</span><span class=NormalTok>(sleep_</span><span
+class=DecValTok>1</span><span class=OperatorTok>$</span><span class=NormalTok>Minutes.Asleep,
+</span><span class=DataTypeTok>na.rm =</span><span class=NormalTok> </span><span
+class=OtherTok>TRUE</span><span class=NormalTok>)) </span><span
+class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=KeywordTok>labs</span><span class=NormalTok>(</span><span
+class=DataTypeTok>title =</span><span class=NormalTok> </span><span
+class=StringTok>'Meditation'</span><span class=NormalTok>)</span><br>
+<span class=NormalTok>g3</span><br>
+<br>
+<br>
+<span class=NormalTok>g4 &lt;-</span><span class=StringTok> </span><span
+class=SpellE><span class=KeywordTok>ggplot</span></span><span class=NormalTok>(df,
+</span><span class=DataTypeTok>mapping =</span><span class=NormalTok> </span><span
+class=SpellE><span class=KeywordTok>aes</span></span><span class=NormalTok>(</span><span
+class=DataTypeTok>x=</span><span class=NormalTok>Date, </span><span
+class=DataTypeTok>y=</span><span class=SpellE><span class=NormalTok>Minutes.Asleep</span></span><span
+class=NormalTok>)) </span><span class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>geom_point</span></span><span
+class=NormalTok>(</span><span class=DataTypeTok>data =</span><span
+class=NormalTok> df, </span><span class=SpellE><span class=KeywordTok>aes</span></span><span
+class=NormalTok>(</span><span class=DataTypeTok>size=</span><span class=SpellE><span
+class=NormalTok>Soy.Milk</span></span><span class=NormalTok>, </span><span
+class=DataTypeTok>colour=</span><span class=SpellE><span class=NormalTok>Soy.Milk</span></span><span
+class=NormalTok>)) </span><span class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>geom_line</span></span><span
+class=NormalTok>() </span><span class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>geom_hline</span></span><span
+class=NormalTok>(</span><span class=SpellE><span class=DataTypeTok>yintercept</span></span><span
+class=DataTypeTok> =</span><span class=NormalTok> </span><span
+class=KeywordTok>mean</span><span class=NormalTok>(sleep_</span><span
+class=DecValTok>1</span><span class=OperatorTok>$</span><span class=NormalTok>Minutes.Asleep,
+</span><span class=DataTypeTok>na.rm =</span><span class=NormalTok> </span><span
+class=OtherTok>TRUE</span><span class=NormalTok>)) </span><span
+class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=KeywordTok>labs</span><span class=NormalTok>(</span><span
+class=DataTypeTok>title =</span><span class=NormalTok> </span><span
+class=StringTok>'Soy Milk'</span><span class=NormalTok>)</span><br>
+<span class=NormalTok>g4</span><br>
+<br>
+<span class=CommentTok>#</span><br>
+<br>
+<a name="_Hlk526426753"><span class=CommentTok># getting started on </span></a><span
+class=SpellE><span style='mso-bookmark:_Hlk526426753'><span class=CommentTok>bayesian</span></span></span><span
+style='mso-bookmark:_Hlk526426753'><span class=CommentTok> methods.</span><br>
+<span class=SpellE><span class=NormalTok>dataList</span></span><span
+class=NormalTok> =</span><span class=StringTok> </span><span class=KeywordTok>list</span><span
+class=NormalTok>(</span><br>
+<span class=NormalTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=DataTypeTok>Ntotal</span></span><span
+class=DataTypeTok> =</span><span class=NormalTok> </span><span
+class=KeywordTok>dim</span><span class=NormalTok>(df)[</span><span
+class=DecValTok>1</span><span class=NormalTok>],</span><br>
+<span class=NormalTok><span style='mso-spacerun:yes'>  </span></span><br>
+<span class=NormalTok><span style='mso-spacerun:yes'>  </span></span><span
+class=DataTypeTok>y =</span><span class=NormalTok> <span class=SpellE>df<span
+class=OperatorTok>$</span>Minutes.Asleep</span>,</span><br>
+<span class=NormalTok><span style='mso-spacerun:yes'>  </span></span><br>
+<span class=NormalTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=DataTypeTok>Resistance.Training</span></span><span
+class=DataTypeTok> =</span><span class=NormalTok> <span class=SpellE>df<span
+class=OperatorTok>$</span>Resistance.Training</span>,</span><br>
+<span class=NormalTok><span style='mso-spacerun:yes'>  </span></span><span
+class=DataTypeTok>Meditation =</span><span class=NormalTok> <span class=SpellE>df<span
+class=OperatorTok>$</span>Meditation</span>,</span><br>
+<span class=NormalTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=DataTypeTok>Soy.Milk</span></span><span
+class=DataTypeTok> =</span><span class=NormalTok> <span class=SpellE>df<span
+class=OperatorTok>$</span>Soy.Milk</span></span><br>
+<span class=NormalTok>)</span><br>
+<br>
+<br>
+<br>
+<span class=CommentTok># Specify model</span><br>
+<span class=SpellE><span class=NormalTok>modelString</span></span><span
+class=NormalTok> =</span><span class=StringTok> &quot;</span><br>
+<span class=StringTok># open quote for <span class=SpellE>modelString</span></span><br>
+<span class=StringTok>model {</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>for ( <span
+class=SpellE>i</span> in 1:Ntotal ) {</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>y[<span
+class=SpellE>i</span>] ~ <span class=SpellE>dnorm</span>( mu[<span
+class=SpellE>i</span>] , pow(sigma, -2) )</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>mu[<span
+class=SpellE>i</span>] &lt;- b0 + b1*<span class=SpellE>Resistance.Training</span>[<span
+class=SpellE>i</span>] + b2*Meditation[<span class=SpellE>i</span>] + b3*<span
+class=SpellE>Soy.Milk</span>[<span class=SpellE>i</span>]</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>}</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>sigma ~ <span
+class=SpellE>dexp</span>(0.01)</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>b0 ~ <span
+class=SpellE>dnorm</span>(0, pow(1000000, -2))</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>b1 ~ <span
+class=SpellE>dnorm</span>(0, pow(1000000, -2))</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>b2 ~ <span
+class=SpellE>dnorm</span>(0, pow(1000000, -2))</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span>b3 ~ <span
+class=SpellE>dnorm</span>(0, pow(1000000, -2))</span><br>
+<span class=StringTok>}</span><br>
+<span class=StringTok>&quot;</span><span class=NormalTok> </span><span
+class=CommentTok># close quote for <span class=SpellE>modelString</span></span><br>
+<br>
+<br>
+<br>
+<span class=SpellE><span class=KeywordTok>writeLines</span></span><span
+class=NormalTok>( <span class=SpellE>modelString</span> , </span><span
+class=DataTypeTok>con=</span><span class=StringTok>&quot;TEMPmodel.txt&quot;</span><span
+class=NormalTok> ) </span><span class=CommentTok># write to file</span><br>
+<br>
+<span class=KeywordTok>library</span><span class=NormalTok>(<span class=SpellE>rjags</span>)
+</span><span class=CommentTok># you need to load the package <span
+class=SpellE>rjags</span> into R here or at early stages</span><br>
+<span class=SpellE><span class=NormalTok>adaptSteps</span></span><span
+class=NormalTok> =</span><span class=StringTok> </span><span class=DecValTok>1000</span><span
+class=NormalTok><span style='mso-spacerun:yes'>            </span></span><span
+class=CommentTok># Number of steps to &quot;tune&quot; the samplers.</span><br>
+<span class=SpellE><span class=NormalTok>burnInSteps</span></span><span
+class=NormalTok> =</span><span class=StringTok> </span><span class=DecValTok>1000</span><span
+class=NormalTok><span style='mso-spacerun:yes'>           </span></span><span
+class=CommentTok># Number of steps to &quot;burn-in&quot; the samplers.</span><br>
+<span class=SpellE><span class=NormalTok>nChains</span></span><span
+class=NormalTok> =</span><span class=StringTok> </span><span class=DecValTok>4</span><span
+class=NormalTok><span style='mso-spacerun:yes'>                  </span></span><span
+class=CommentTok># Number of chains to run.</span><br>
+<span class=SpellE><span class=NormalTok>numSavedSteps</span></span><span
+class=NormalTok>=</span><span class=DecValTok>10000</span><span
+class=NormalTok><span style='mso-spacerun:yes'>          </span></span><span
+class=CommentTok># Total number of steps in chains to save.</span><br>
+<span class=SpellE><span class=NormalTok>thinSteps</span></span><span
+class=NormalTok>=</span><span class=DecValTok>100</span><span class=NormalTok><span
+style='mso-spacerun:yes'>                  </span></span><span
+class=CommentTok># Number of steps to &quot;thin&quot; (1=keep every step).</span><br>
+<span class=SpellE><span class=NormalTok>nPerChain</span></span><span
+class=NormalTok> =</span><span class=StringTok> </span><span class=KeywordTok>ceiling</span><span
+class=NormalTok>( ( <span class=SpellE>numSavedSteps</span> </span><span
+class=OperatorTok>*</span><span class=StringTok> </span><span class=SpellE><span
+class=NormalTok>thinSteps</span></span><span class=NormalTok> ) </span><span
+class=OperatorTok>/</span><span class=StringTok> </span><span class=SpellE><span
+class=NormalTok>nChains</span></span><span class=NormalTok> ) </span><span
+class=CommentTok># Steps per chain.</span><br>
+<br>
+<br>
+<span class=CommentTok># Compile the model</span><br>
+<span class=SpellE><span class=NormalTok>jagsModel</span></span><span
+class=NormalTok> =</span><span class=StringTok> </span><span class=SpellE><span
+class=KeywordTok>jags.model</span></span><span class=NormalTok>(</span><span
+class=DataTypeTok>file=</span><span class=StringTok>&quot;TEMPmodel.txt&quot;</span><span
+class=NormalTok>,</span><br>
+<span class=NormalTok><span style='mso-spacerun:yes'>                      
+</span></span><span class=DataTypeTok>data=</span><span class=SpellE><span
+class=NormalTok>dataList</span></span><span class=NormalTok>,<span
+style='mso-spacerun:yes'>      </span></span><br>
+<span class=NormalTok><span style='mso-spacerun:yes'>                      
+</span></span><span class=SpellE><span class=DataTypeTok>n.chains</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=NormalTok>nChains</span></span><span
+class=NormalTok>,</span><br>
+<span class=NormalTok><span style='mso-spacerun:yes'>                      
+</span></span><span class=SpellE><span class=DataTypeTok>n.adapt</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=NormalTok>adaptSteps</span></span><br>
+<span class=NormalTok><span style='mso-spacerun:yes'>                      
+</span>)</span><br>
+<br>
+<span class=KeywordTok>update</span><span class=NormalTok>( <span class=SpellE>jagsModel</span>
+,<span style='mso-spacerun:yes'>   </span></span><span class=CommentTok># tell
+the name of the object that include the model to JAGS</span><br>
+<span class=NormalTok><span style='mso-spacerun:yes'>        </span></span><span
+class=SpellE><span class=DataTypeTok>n.iter</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=NormalTok>burnInSteps</span></span><span
+class=NormalTok><span style='mso-spacerun:yes'>    </span></span><span
+class=CommentTok># specify the length of the burn-in period</span><br>
+<span class=NormalTok>)</span><br>
+<br>
+<span class=SpellE><span class=NormalTok>codaSamples</span></span><span
+class=NormalTok> =</span><span class=StringTok> </span><span class=SpellE><span
+class=KeywordTok>coda.samples</span></span><span class=NormalTok>( </span><span
+class=DataTypeTok>model =</span><span class=NormalTok> <span class=SpellE>jagsModel</span>,</span><br>
+<span class=NormalTok><span
+style='mso-spacerun:yes'>                            </span></span><span
+class=SpellE><span class=DataTypeTok>variable.names</span></span><span
+class=DataTypeTok>=</span><span class=KeywordTok>c</span><span class=NormalTok>(</span><span
+class=StringTok>&quot;sigma&quot;</span><span class=NormalTok>, </span><span
+class=StringTok>&quot;b0&quot;</span><span class=NormalTok>, </span><span
+class=StringTok>&quot;b1&quot;</span><span class=NormalTok>, </span><span
+class=StringTok>&quot;b2&quot;</span><span class=NormalTok>, </span><span
+class=StringTok>&quot;b3&quot;</span><span class=NormalTok>),</span><br>
+<span class=NormalTok><span
+style='mso-spacerun:yes'>                            </span></span><span
+class=SpellE><span class=DataTypeTok>n.iter</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=NormalTok>nPerChain</span></span><span
+class=NormalTok>, </span><span class=DataTypeTok>thin =</span><span
+class=NormalTok> <span class=SpellE>thinSteps</span>)</span><br>
+</span><br>
+<span class=CommentTok># Display MCMC diagnostics</span><br>
+<span class=KeywordTok>source</span><span class=NormalTok>(</span><span
+class=StringTok>&quot;../DBDA2Eprograms/DBDA2E-utilities.R&quot;</span><span
+class=NormalTok>)</span><br>
+<span class=SpellE><span class=KeywordTok>diagMCMC</span></span><span
+class=NormalTok>( </span><span class=SpellE><span class=DataTypeTok>codaObject</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=NormalTok>codaSamples</span></span><span
+class=NormalTok> , </span><span class=SpellE><span class=DataTypeTok>parName</span></span><span
+class=DataTypeTok>=</span><span class=StringTok>&quot;b0&quot;</span><span
+class=NormalTok>)</span><br>
+<span class=SpellE><span class=KeywordTok>diagMCMC</span></span><span
+class=NormalTok>( </span><span class=SpellE><span class=DataTypeTok>codaObject</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=NormalTok>codaSamples</span></span><span
+class=NormalTok> , </span><span class=SpellE><span class=DataTypeTok>parName</span></span><span
+class=DataTypeTok>=</span><span class=StringTok>&quot;b1&quot;</span><span
+class=NormalTok>)</span><br>
+<span class=SpellE><span class=KeywordTok>diagMCMC</span></span><span
+class=NormalTok>( </span><span class=SpellE><span class=DataTypeTok>codaObject</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=NormalTok>codaSamples</span></span><span
+class=NormalTok> , </span><span class=SpellE><span class=DataTypeTok>parName</span></span><span
+class=DataTypeTok>=</span><span class=StringTok>&quot;b2&quot;</span><span
+class=NormalTok>)</span><br>
+<span class=SpellE><span class=KeywordTok>diagMCMC</span></span><span
+class=NormalTok>( </span><span class=SpellE><span class=DataTypeTok>codaObject</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=NormalTok>codaSamples</span></span><span
+class=NormalTok> , </span><span class=SpellE><span class=DataTypeTok>parName</span></span><span
+class=DataTypeTok>=</span><span class=StringTok>&quot;b3&quot;</span><span
+class=NormalTok>)</span><br>
+<span class=SpellE><span class=KeywordTok>diagMCMC</span></span><span
+class=NormalTok>( </span><span class=SpellE><span class=DataTypeTok>codaObject</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=NormalTok>codaSamples</span></span><span
+class=NormalTok> , </span><span class=SpellE><span class=DataTypeTok>parName</span></span><span
+class=DataTypeTok>=</span><span class=StringTok>&quot;sigma&quot;</span><span
+class=NormalTok> )</span><br>
+<br>
+<span class=CommentTok># Display the posterior distribution of mu</span><br>
+<br>
+<span class=SpellE><span class=KeywordTok>plotPost</span></span><span
+class=NormalTok>( <span class=SpellE>codaSamples</span>[,</span><span
+class=StringTok>&quot;sigma&quot;</span><span class=NormalTok>], </span><span
+class=DataTypeTok>main=</span><span class=StringTok>&quot;sigma&quot;</span><span
+class=NormalTok>, </span><span class=SpellE><span class=DataTypeTok>xlab</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=KeywordTok>bquote</span></span><span
+class=NormalTok>(sigma))</span><br>
+<span class=SpellE><span class=KeywordTok>plotPost</span></span><span
+class=NormalTok>( <span class=SpellE>codaSamples</span>[,</span><span
+class=StringTok>&quot;b0&quot;</span><span class=NormalTok>] , </span><span
+class=DataTypeTok>main=</span><span class=StringTok>&quot;b0&quot;</span><span
+class=NormalTok> , </span><span class=SpellE><span class=DataTypeTok>xlab</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=KeywordTok>bquote</span></span><span
+class=NormalTok>(b0) )</span><br>
+<span class=SpellE><span class=KeywordTok>plotPost</span></span><span
+class=NormalTok>( <span class=SpellE>codaSamples</span>[,</span><span
+class=StringTok>&quot;b1&quot;</span><span class=NormalTok>] , </span><span
+class=DataTypeTok>main=</span><span class=StringTok>&quot;b1&quot;</span><span
+class=NormalTok> , </span><span class=SpellE><span class=DataTypeTok>xlab</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=KeywordTok>bquote</span></span><span
+class=NormalTok>(b1) )</span><br>
+<span class=SpellE><span class=KeywordTok>plotPost</span></span><span
+class=NormalTok>( <span class=SpellE>codaSamples</span>[,</span><span
+class=StringTok>&quot;b2&quot;</span><span class=NormalTok>] , </span><span
+class=DataTypeTok>main=</span><span class=StringTok>&quot;b2&quot;</span><span
+class=NormalTok> , </span><span class=SpellE><span class=DataTypeTok>xlab</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=KeywordTok>bquote</span></span><span
+class=NormalTok>(b2) )</span><br>
+<span class=SpellE><span class=KeywordTok>plotPost</span></span><span
+class=NormalTok>( <span class=SpellE>codaSamples</span>[,</span><span
+class=StringTok>&quot;b3&quot;</span><span class=NormalTok>] , </span><span
+class=DataTypeTok>main=</span><span class=StringTok>&quot;b3&quot;</span><span
+class=NormalTok> , </span><span class=SpellE><span class=DataTypeTok>xlab</span></span><span
+class=DataTypeTok>=</span><span class=SpellE><span class=KeywordTok>bquote</span></span><span
+class=NormalTok>(b3) )</span><br>
+<br>
+<br>
+<br>
+<span class=CommentTok># compare predictions to actual.</span><br>
+<span class=SpellE><span class=NormalTok>our_predictions</span></span><span
+class=NormalTok> &lt;-</span><span class=StringTok> </span><span
+class=DecValTok>462</span><span class=NormalTok> </span><span
+class=OperatorTok>-</span><span class=StringTok> </span><span class=FloatTok>30.2</span><span
+class=OperatorTok>*</span><span class=SpellE><span class=KeywordTok>as.numeric</span></span><span
+class=NormalTok>(<span class=SpellE>df<span class=OperatorTok>$</span>Resistance.Training</span>)
+</span><span class=OperatorTok>+</span><span class=StringTok> </span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=FloatTok>21.9</span><span class=OperatorTok>*</span><span class=SpellE><span
+class=KeywordTok>as.numeric</span></span><span class=NormalTok>(<span
+class=SpellE>df<span class=OperatorTok>$</span>Meditation</span>) </span><span
+class=OperatorTok>+</span><span class=StringTok> </span><span class=FloatTok>12.9</span><span
+class=OperatorTok>*</span><span class=SpellE><span class=KeywordTok>as.numeric</span></span><span
+class=NormalTok>(<span class=SpellE>df<span class=OperatorTok>$</span>Soy.Milk</span>)</span><br>
+<span class=NormalTok>g6 &lt;-</span><span class=StringTok> </span><span
+class=NormalTok>df </span><span class=OperatorTok>%&gt;%</span><span
+class=StringTok> </span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=KeywordTok>mutate</span><span class=NormalTok>(</span><span
+class=DataTypeTok>predictions =</span><span class=NormalTok> <span
+class=SpellE>our_predictions</span>) </span><span class=OperatorTok>%&gt;%</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=KeywordTok>select</span><span class=NormalTok>(</span><span
+class=OperatorTok>-</span><span class=SpellE><span class=NormalTok>Soy.Milk</span></span><span
+class=NormalTok>, </span><span class=OperatorTok>-</span><span class=SpellE><span
+class=NormalTok>Resistance.Training</span></span><span class=NormalTok>, </span><span
+class=OperatorTok>-</span><span class=NormalTok>Meditation, </span><span
+class=OperatorTok>-</span><span class=NormalTok>Sprints) </span><span
+class=OperatorTok>%&gt;%</span><span class=StringTok> </span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=KeywordTok>gather</span><span class=NormalTok>(</span><span
+class=DataTypeTok>value =</span><span class=NormalTok> minutes, </span><span
+class=DataTypeTok>key =</span><span class=NormalTok> key, </span><span
+class=OperatorTok>-</span><span class=NormalTok>Date) </span><span
+class=OperatorTok>%&gt;%</span><span class=StringTok> </span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>ggplot</span></span><span class=NormalTok>(</span><span
+class=DataTypeTok>mapping =</span><span class=NormalTok> </span><span
+class=SpellE><span class=KeywordTok>aes</span></span><span class=NormalTok>(</span><span
+class=DataTypeTok>x=</span><span class=NormalTok>Date, </span><span
+class=DataTypeTok>y=</span><span class=NormalTok>minutes, </span><span
+class=DataTypeTok>colour=</span><span class=NormalTok>key)) </span><span
+class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>geom_point</span></span><span
+class=NormalTok>() </span><span class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>geom_line</span></span><span
+class=NormalTok>() </span><span class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=KeywordTok>labs</span><span class=NormalTok>(</span><span
+class=DataTypeTok>title =</span><span class=NormalTok> </span><span
+class=StringTok>'Comparing Predicted with Actual'</span><span class=NormalTok>)
+</span><span class=OperatorTok>+</span><br>
+<span class=StringTok><span style='mso-spacerun:yes'>  </span></span><span
+class=SpellE><span class=KeywordTok>geom_ribbon</span></span><span
+class=NormalTok>(</span><span class=DataTypeTok>data =</span><span
+class=NormalTok> df, </span><span class=SpellE><span class=KeywordTok>aes</span></span><span
+class=NormalTok>(</span><span class=DataTypeTok>x=</span><span class=NormalTok>Date,
+</span><span class=SpellE><span class=DataTypeTok>ymin</span></span><span
+class=DataTypeTok>=</span><span class=NormalTok>our_predictions</span><span
+class=OperatorTok>-1.96*</span><span class=FloatTok>42.6</span><span
+class=NormalTok>, </span><span class=SpellE><span class=DataTypeTok>ymax</span></span><span
+class=DataTypeTok>=</span><span class=NormalTok>our_predictions</span><span
+class=OperatorTok>+1.96*</span><span class=FloatTok>42.6</span><span
+class=NormalTok>), </span><span class=DataTypeTok>alpha=</span><span
+class=FloatTok>0.2</span><span class=NormalTok>, </span><span class=SpellE><span
+class=DataTypeTok>inherit.aes</span></span><span class=DataTypeTok> =</span><span
+class=NormalTok> </span><span class=OtherTok>FALSE</span><span class=NormalTok>)</span><br>
+<span class=NormalTok>g6</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:6.0cm;margin-bottom:8.0pt;
+margin-left:6.0cm'><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>
