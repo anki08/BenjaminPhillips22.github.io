@@ -23,6 +23,7 @@ body {
 
 .card-body {
     height: 240pt;
+    /* text-decoration: none; */
 }
 
 .footer-bottom{
@@ -131,3 +132,16 @@ body {
     color: greenyellow;
 }
  */
+ /* couldn't get the below to work
+ .card-title {
+    text-decoration: none;
+    color: #0C1D2E
+}
+.card-title {
+    transition: all 0.3s;
+}
+
+.card-title:hover {
+    transform: scale(1.05);
+    color: #4B0082
+} */
