@@ -132,7 +132,7 @@ body {
     color: greenyellow;
 }
  */
- /* couldn't get the below to work
+
  .card-title {
     text-decoration: none;
     color: #0C1D2E
@@ -144,4 +144,4 @@ body {
 .card-title:hover {
     transform: scale(1.05);
     color: #4B0082
-} */
+}
