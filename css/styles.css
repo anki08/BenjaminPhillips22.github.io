@@ -137,14 +137,22 @@ body {
     text-decoration: none;
     color: #0C1D2E
 }
-.card-title {
+/* .card-title {
     transition: all 0.3s;
 }
 
 .card-title:hover {
     transform: scale(1.05);
     color: #4B0082
-}
+} */
 .link-style{
     cursor: pointer;
+}
+/* will this make the card scale? */
+.card {
+    transition: all 0.3s;
+}
+.card:hover {
+    transform: scale(1.055);
+    /* color: #4B0082 */
 }
