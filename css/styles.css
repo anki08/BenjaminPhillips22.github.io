@@ -145,3 +145,6 @@ body {
     transform: scale(1.05);
     color: #4B0082
 }
+.link-style{
+    cursor: pointer;
+}
